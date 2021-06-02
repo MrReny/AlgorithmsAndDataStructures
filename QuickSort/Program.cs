@@ -7,13 +7,11 @@ namespace QuickSort
 
         static void Main(string[] args)
         {
-            Console.Write("Введите длинну массива: N = ");
+            Console.Write("Введите длинну массива <= 1000000: N = ");
             var len = Convert.ToInt32(Console.ReadLine());
             var a = new int[len];
 
             var rnd = new Random(len);
-
-            Console.Write("Неупорядаченный массив: ");
 
             for (var i = 0; i < a.Length - 1; i++)
             {
