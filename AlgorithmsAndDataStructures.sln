@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnePhaseMergeSort", "OnePha
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BTree", "BTree\BTree.csproj", "{41BF1E17-E547-4F10-A0F1-D7696D735D65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shenon-Fano Coding", "Shenon-Fano Coding\Shenon-Fano Coding.csproj", "{BFC7680C-3E4A-415B-9C35-79D2B2E3D64D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{41BF1E17-E547-4F10-A0F1-D7696D735D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{41BF1E17-E547-4F10-A0F1-D7696D735D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{41BF1E17-E547-4F10-A0F1-D7696D735D65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFC7680C-3E4A-415B-9C35-79D2B2E3D64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFC7680C-3E4A-415B-9C35-79D2B2E3D64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFC7680C-3E4A-415B-9C35-79D2B2E3D64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFC7680C-3E4A-415B-9C35-79D2B2E3D64D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
