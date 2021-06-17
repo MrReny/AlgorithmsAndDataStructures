@@ -29,6 +29,11 @@
                           />
             </MenuItem>
         </Menu>
+        <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+            <Label Content="{Binding FileName}"/>
+            <Label Content="{Binding Effectivnes}"/>
+        </StackPanel>
+
         <lvc:CartesianChart Series="{Binding CommoditySeries}"
                             Zoom="X"
                             Pan="X"

@@ -31,6 +31,8 @@ namespace Shenon_Fano_Coding.ViewModels
         }
 
         private SeriesCollection _commoditySeries;
+        private string _fileName;
+        private string _effectivnes;
 
 
         public SeriesCollection CommoditySeries
@@ -48,7 +50,27 @@ namespace Shenon_Fano_Coding.ViewModels
         public string[] Labels => _commodityDictionary.Keys.Select(c => "" + c).ToArray();
 
 
-        private string FileName { get; set; }
+        public string FileName
+        {
+            get => _fileName;
+            set
+            {
+                if(_fileName==value) return;
+                _fileName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Effectivnes
+        {
+            get => _effectivnes;
+            set
+            {
+                if(_effectivnes ==value) return;
+                _effectivnes = value;
+                OnPropertyChanged();
+            }
+        }
 
 
         public DelegateCommand OpenFile => new DelegateCommand(() =>
@@ -145,6 +167,12 @@ namespace Shenon_Fano_Coding.ViewModels
                 await e.Encode(cnt);
 
                 rs.Close();
+
+                var fl = new FileStream(FileName, FileMode.Open, FileAccess.ReadWrite,
+                    FileShare.ReadWrite).Length;
+                var sl = new FileStream(FileName + ".fano", FileMode.Open, FileAccess.ReadWrite,
+                    FileShare.ReadWrite).Length;
+                Effectivnes =  $"Эффективность {(float)fl/(fl-sl) *10}%" ;
             }
             catch (Exception exception)
             {

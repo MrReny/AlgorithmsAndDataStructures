@@ -65,8 +65,6 @@ namespace Shenon_Fano_Coding.Model
 
                 long originalFileLength = _reader.GetFileSize();
 
-
-
                 //Записываем длинну слова чтобы расшифорвать
                 await _keyWriter.WriteCustomLength(_wordLength, sizeof(byte) * 8);
 
